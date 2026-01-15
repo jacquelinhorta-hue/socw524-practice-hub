@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOCW524 Practice - Visual Learning Hub</title>
+    <meta name="description"
+        content="Interactive visual learning platform for SOCW524 Practice materials - transforming articles, PDFs, and presentations into engaging visual content">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-background"></div>
+        <div class="hero-content">
+            <div class="hero-badge">SOCW524 Practice</div>
+            <h1 class="hero-title">Visual Learning Hub</h1>
+            <p class="hero-subtitle">Transform complex readings into visual insights and engaging conversations</p>
+            <div class="hero-stats">
+                <div class="stat-card">
+                    <div class="stat-number">5</div>
+                    <div class="stat-label">Documents</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">4</div>
+                    <div class="stat-label">Key Topics</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">Visual</div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="main-nav" id="mainNav">
+        <div class="nav-container">
+            <div class="nav-logo">📚 SOCW524</div>
+            <ul class="nav-links">
+                <li><a href="#overview" class="nav-link active">Overview</a></li>
+                <li><a href="#documents" class="nav-link">Documents</a></li>
+                <li><a href="#key-concepts" class="nav-link">Key Concepts</a></li>
+                <li><a href="#discussion" class="nav-link">Discussion Points</a></li>
+            </ul>
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                <span class="theme-icon">🌙</span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Overview Section -->
+        <section id="overview" class="section overview-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Course Materials Overview</h2>
+                    <p class="section-subtitle">Your complete visual guide to SOCW524 Practice readings</p>
+                </div>
+
+                <div class="topic-grid">
+                    <div class="topic-card" data-topic="ethics">
+                        <div class="topic-icon">⚖️</div>
+                        <h3 class="topic-title">Ethics in Social Work</h3>
+                        <p class="topic-description">Ethical considerations in evidence-based practice and AI
+                            integration</p>
+                        <div class="topic-docs">2 documents</div>
+                    </div>
+                    <div class="topic-card" data-topic="technology">
+                        <div class="topic-icon">💻</div>
+                        <h3 class="topic-title">Technology Standards</h3>
+                        <p class="topic-description">NASW technology standards and digital practice guidelines</p>
+                        <div class="topic-docs">2 documents</div>
+                    </div>
+                    <div class="topic-card" data-topic="ai">
+                        <div class="topic-icon">🤖</div>
+                        <h3 class="topic-title">AI in Social Work</h3>
+                        <p class="topic-description">Artificial intelligence applications and ethical implications</p>
+                        <div class="topic-docs">1 document</div>
+                    </div>
+                    <div class="topic-card" data-topic="practice">
+                        <div class="topic-icon">🎯</div>
+                        <h3 class="topic-title">Evidence-Based Practice</h3>
+                        <p class="topic-description">EBP frameworks and practical applications</p>
+                        <div class="topic-docs">2 documents</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Documents Section -->
+        <section id="documents" class="section documents-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Document Library</h2>
+                    <p class="section-subtitle">Click any document to explore visual summaries and key insights</p>
+                </div>
+
+                <div class="documents-grid">
+                    <!-- Document 1: Furman Article -->
+                    <article class="document-card" data-doc="furman">
+                        <div class="document-header">
+                            <div class="document-type">📄 Article</div>
+                            <button class="bookmark-btn" aria-label="Bookmark">⭐</button>
+                        </div>
+                        <h3 class="document-title">Furman Article</h3>
+                        <p class="document-meta">PDF • Ethics & Practice</p>
+                        <div class="document-tags">
+                            <span class="tag">Ethics</span>
+                            <span class="tag">Practice</span>
+                        </div>
+                        <button class="document-btn" onclick="openDocument('furman')">
+                            <span>Explore Visual Summary</span>
+                            <span class="btn-arrow">→</span>
+                        </button>
+                    </article>
+
+                    <!-- Document 2: NASW Tech Standards -->
+                    <article class="document-card" data-doc="nasw">
+                        <div class="document-header">
+                            <div class="document-type">📄 Standards</div>
+                            <button class="bookmark-btn" aria-label="Bookmark">⭐</button>
+                        </div>
+                        <h3 class="document-title">NASW Technology Standards 2017</h3>
+                        <p class="document-meta">PDF • Technology Standards</p>
+                        <div class="document-tags">
+                            <span class="tag">Technology</span>
+                            <span class="tag">Standards</span>
+                            <span class="tag">NASW</span>
+                        </div>
+                        <button class="document-btn" onclick="openDocument('nasw')">
+                            <span>Explore Visual Summary</span>
+                            <span class="btn-arrow">→</span>
+                        </button>
+                    </article>
+
+                    <!-- Document 3: Raines and Kelly -->
+                    <article class="document-card" data-doc="raines">
+                        <div class="document-header">
+                            <div class="document-type">📄 Chapter</div>
+                            <button class="bookmark-btn" aria-label="Bookmark">⭐</button>
+                        </div>
+                        <h3 class="document-title">Raines and Kelly (2020) - Chapter 17</h3>
+                        <p class="document-meta">PDF • Technology in Practice</p>
+                        <div class="document-tags">
+                            <span class="tag">Technology</span>
+                            <span class="tag">Practice</span>
+                        </div>
+                        <button class="document-btn" onclick="openDocument('raines')">
+                            <span>Explore Visual Summary</span>
+                            <span class="btn-arrow">→</span>
+                        </button>
+                    </article>
+
+                    <!-- Document 4: Reamer AI Article -->
+                    <article class="document-card" data-doc="reamer">
+                        <div class="document-header">
+                            <div class="document-type">📄 Article</div>
+                            <button class="bookmark-btn" aria-label="Bookmark">⭐</button>
+                        </div>
+                        <h3 class="document-title">Reamer 2023 - AI in Social Work</h3>
+                        <p class="document-meta">PDF • Artificial Intelligence</p>
+                        <div class="document-tags">
+                            <span class="tag">AI</span>
+                            <span class="tag">Ethics</span>
+                            <span class="tag">Future</span>
+                        </div>
+                        <button class="document-btn" onclick="openDocument('reamer')">
+                            <span>Explore Visual Summary</span>
+                            <span class="btn-arrow">→</span>
+                        </button>
+                    </article>
+
+                    <!-- Document 5: Week 2 PowerPoint -->
+                    <article class="document-card" data-doc="week2">
+                        <div class="document-header">
+                            <div class="document-type">📊 Presentation</div>
+                            <button class="bookmark-btn" aria-label="Bookmark">⭐</button>
+                        </div>
+                        <h3 class="document-title">Week 2: Ethical Issues in EBP</h3>
+                        <p class="document-meta">PowerPoint • Evidence-Based Practice</p>
+                        <div class="document-tags">
+                            <span class="tag">EBP</span>
+                            <span class="tag">Ethics</span>
+                            <span class="tag">Week 2</span>
+                        </div>
+                        <button class="document-btn" onclick="openDocument('week2')">
+                            <span>Explore Visual Summary</span>
+                            <span class="btn-arrow">→</span>
+                        </button>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Key Concepts Section -->
+        <section id="key-concepts" class="section concepts-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Key Concepts & Themes</h2>
+                    <p class="section-subtitle">Master the essential ideas across all documents</p>
+                </div>
+
+                <div class="concepts-container">
+                    <div class="concept-card">
+                        <div class="concept-number">01</div>
+                        <h3 class="concept-title">Ethical Decision-Making in Digital Practice</h3>
+                        <p class="concept-description">Understanding how traditional social work ethics apply to
+                            technology-mediated practice, including confidentiality, informed consent, and professional
+                            boundaries in digital spaces.</p>
+                        <div class="concept-sources">
+                            <span class="source-badge">Furman</span>
+                            <span class="source-badge">NASW</span>
+                            <span class="source-badge">Week 2</span>
+                        </div>
+                    </div>
+
+                    <div class="concept-card">
+                        <div class="concept-number">02</div>
+                        <h3 class="concept-title">Technology Competency Standards</h3>
+                        <p class="concept-description">NASW's framework for technology competence including digital
+                            literacy, data security, telehealth practices, and maintaining professional standards in
+                            online environments.</p>
+                        <div class="concept-sources">
+                            <span class="source-badge">NASW</span>
+                            <span class="source-badge">Raines & Kelly</span>
+                        </div>
+                    </div>
+
+                    <div class="concept-card">
+                        <div class="concept-number">03</div>
+                        <h3 class="concept-title">AI Integration & Future Practice</h3>
+                        <p class="concept-description">Exploring artificial intelligence applications in social work,
+                            including benefits, risks, ethical considerations, and the evolving role of AI in client
+                            services and decision support.</p>
+                        <div class="concept-sources">
+                            <span class="source-badge">Reamer 2023</span>
+                        </div>
+                    </div>
+
+                    <div class="concept-card">
+                        <div class="concept-number">04</div>
+                        <h3 class="concept-title">Evidence-Based Practice Framework</h3>
+                        <p class="concept-description">Integrating research evidence, clinical expertise, and client
+                            values in practice decisions. Understanding the ethical obligations to use evidence-informed
+                            interventions.</p>
+                        <div class="concept-sources">
+                            <span class="source-badge">Week 2</span>
+                            <span class="source-badge">Furman</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Discussion Points Section -->
+        <section id="discussion" class="section discussion-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Discussion Starters</h2>
+                    <p class="section-subtitle">Engage meaningfully with classmates using these conversation prompts</p>
+                </div>
+
+                <div class="discussion-grid">
+                    <div class="discussion-card">
+                        <div class="discussion-icon">💬</div>
+                        <h3 class="discussion-title">Ethics in the Digital Age</h3>
+                        <ul class="discussion-points">
+                            <li>How do we maintain confidentiality when using digital platforms?</li>
+                            <li>What are the unique ethical challenges of telehealth vs. in-person practice?</li>
+                            <li>How should social workers handle client data in cloud-based systems?</li>
+                        </ul>
+                        <button class="discussion-btn" onclick="expandDiscussion(this)">Show More Points</button>
+                    </div>
+
+                    <div class="discussion-card">
+                        <div class="discussion-icon">🤖</div>
+                        <h3 class="discussion-title">AI & Automation</h3>
+                        <ul class="discussion-points">
+                            <li>Should AI be used in risk assessment and decision-making?</li>
+                            <li>What safeguards are needed to prevent algorithmic bias?</li>
+                            <li>How can we balance efficiency with the human element of social work?</li>
+                        </ul>
+                        <button class="discussion-btn" onclick="expandDiscussion(this)">Show More Points</button>
+                    </div>
+
+                    <div class="discussion-card">
+                        <div class="discussion-icon">📊</div>
+                        <h3 class="discussion-title">Evidence-Based Practice</h3>
+                        <ul class="discussion-points">
+                            <li>How do we balance research evidence with cultural competence?</li>
+                            <li>What are the ethical implications of not using EBP?</li>
+                            <li>How can practitioners stay current with evolving evidence?</li>
+                        </ul>
+                        <button class="discussion-btn" onclick="expandDiscussion(this)">Show More Points</button>
+                    </div>
+
+                    <div class="discussion-card">
+                        <div class="discussion-icon">🌐</div>
+                        <h3 class="discussion-title">Technology Standards</h3>
+                        <ul class="discussion-points">
+                            <li>Are current NASW standards keeping pace with technology?</li>
+                            <li>What training do social workers need for digital competence?</li>
+                            <li>How do we address the digital divide in service delivery?</li>
+                        </ul>
+                        <button class="discussion-btn" onclick="expandDiscussion(this)">Show More Points</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Document Modal -->
+    <div class="modal" id="documentModal">
+        <div class="modal-overlay" onclick="closeModal()"></div>
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal()" aria-label="Close modal">×</button>
+            <div class="modal-body" id="modalBody">
+                <!-- Content will be dynamically loaded -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-text">SOCW524 Practice Visual Learning Hub • Spring 2026 APU</p>
+            <p class="footer-subtext">Transforming readings into visual insights for better learning and discussion</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
